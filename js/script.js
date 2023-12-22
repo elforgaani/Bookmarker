@@ -29,10 +29,11 @@ function addWebsite() {
     bookmarksList.push(bookmark);
     localStorage.setItem('bookmarksList', JSON.stringify(bookmarksList));
     showBookmarks();
+    clear()
 }
 
 function showBookmarks() {
-    var container = ''; 
+    var container = '';
     var bookmarksList = JSON.parse(localStorage.getItem('bookmarksList'));
 
     for (var i = 0; i < bookmarksList.length; i++) {
@@ -64,4 +65,9 @@ function deleteBookmark(index) {
     bookmarksList.splice(index, 1);
     localStorage.setItem('bookmarksList', JSON.stringify(bookmarksList));
     showBookmarks();
+}
+
+function clear() {
+    websiteName.value = ''
+    websiteUrl.value = ''
 }
