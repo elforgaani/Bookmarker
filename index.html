@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookemarker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="home-view vh-100 py-5">
+        <div class="container">
+          <div class="row gy-2 justify-content-center">
+            <div class="col-md-12">
+              <div class="title text-center">
+                <h1 class="bg-light rounded-4 py-2">
+                  Save your favorite <span>Bookmarks !</span>
+                </h1>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="bm-name custom-input">
+                <div
+                  class="icon text-center d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-regular fa-bookmark fs-5"></i>
+                </div>
+                <input
+                id="websiteName"
+                  type="text"
+                  placeholder="Website Name"
+                  class="h-100 rounded-3"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bm-url custom-input">
+                <div
+                  class="icon text-center d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-solid fa-link fs-5"></i>
+                </div>
+                <input
+                id="websiteUrl"
+                  type="text"
+                  placeholder="Website URL"
+                  class="h-100 rounded-3"
+                />
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <div
+                class="save-button d-flex justify-content-center align-items-center"
+              >
+                <button class="btn btn-light save" onclick="addWebsite()">Save Bookmark</button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="table-responsive rounded-3">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No.</th>
+                      <th scope="col">Website</th>
+                      <th scope="col">Visit</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
